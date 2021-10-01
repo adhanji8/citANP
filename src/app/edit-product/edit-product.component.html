@@ -1,0 +1,9 @@
+<h3>Edit Data</h3>
+<select [(ngModel)]="_editId">
+  <option *ngFor="let product of _productsArray" value="{{ product._id }}">
+    {{ product._id }} {{ product.productName }}
+  </option>
+</select>
+Updated Name: <input type="text" [(ngModel)]="_editableProductName" />
+<input type="submit" value="Submit New Name" (click)="updateProduct()" />
+<hr />

@@ -1,0 +1,17 @@
+<h3>GET All Items</h3>
+<table>
+  <tr *ngFor="let product of _productsArray">
+    <td>
+      {{ product._id }}
+    </td>
+    <td>
+      {{ product.productName }}
+    </td>
+    <td>
+      <a href="#" (click)="deleteProduct(product._id)">Delete</a>
+    </td>
+  </tr>
+</table>
+
+{{ _errorMessage }}
+<hr />
